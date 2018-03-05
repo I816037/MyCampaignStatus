@@ -13,7 +13,7 @@
       "test.html"
     ],
     "buildRequired": false,
-    "lastBuildDateTime": "Mon, 05 Mar 2018 02:38:12 GMT"
+    "lastBuildDateTime": "Mon, 05 Mar 2018 02:49:06 GMT"
   },
   "dataBinding": {
     "/webapp/view/App.view.xml": {
@@ -71,6 +71,6 @@
   "hcpdeploy": {
     "account": "i816037trial",
     "name": "mycampaignstatus",
-    "lastVersionWeTriedToDeploy": "1.0.0"
+    "lastVersionWeTriedToDeploy": "1.0.1"
   }
 }
