@@ -1,62 +1,103 @@
-<mvc:View
-		controllerName="crm.mkt.cpg.controller.Detail"
-		xmlns="sap.m"
-		xmlns:mvc="sap.ui.core.mvc"
-		xmlns:semantic="sap.m.semantic"
-		xmlns:footerbar="sap.ushell.ui.footerbar">
-
-	<semantic:DetailPage
-			id="page"
-			navButtonPress="onNavBack"
-			showNavButton="{device>/system/phone}"
-			title="{i18n>detailTitle}"
-			busy="{detailView>/busy}"
-			busyIndicatorDelay="{detailView>/delay}">
-
+<mvc:View controllerName="crm.mkt.cpg.controller.Detail" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+	xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:smartForm="sap.ui.comp.smartform" xmlns:smartField="sap.ui.comp.smartfield">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{i18n>detailTitle}"
+		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
 		<semantic:content>
-			<ObjectHeader
-					id="objectHeader"
-					title="{ExternalId}"
->
+			<ObjectHeader id="objectHeader" title="{ExternalId}">
+				<statuses>
+					<ObjectStatus text="{StatusText}" state="Success"/>
+				</statuses>
+				<attributes>
+					<ObjectAttribute title="{/#Campaigns/Text1/@sap:label}" text="{Text1}"/>
+					<ObjectAttribute title="{/#Campaigns/ResponsibleName/@sap:label}" text="{ResponsibleText} {ResponsibleName}" active="true" press="handleEmployeelinkPressed"/>
+				</attributes>
 			</ObjectHeader>
-			<IconTabBar
-					id="iconTabBar"
-					class="sapUiResponsiveContentPadding">
+			<IconTabBar id="iconTabBar" class="sapUiResponsiveContentPadding">
 				<items>
-					<IconTabFilter
-							id="iconTabBarFilter1"
-							icon="sap-icon://hint"
-							tooltip="{i18n>detailIconTabBarInfo}">
+					<IconTabFilter id="iconTabBarFilter1" icon="sap-icon://hint" tooltip="{i18n>detailIconTabBarInfo}">
+						<smartForm:SmartForm id="smartForm" editTogglable="false" title="">
+							<smartForm:Group label="General Data">
+								<smartForm:GroupElement label="{/#Campaigns/CampType/@sap:label}">
+									<smartField:SmartField textLabel="{CampTypetx}" value="{CampTypetx}"/>
+								</smartForm:GroupElement>
+								<smartForm:GroupElement label="{/#Campaigns/Objective/@sap:label}">
+									<smartField:SmartField textLabel="{Objectivetx}" value="{Objectivetx}"/>
+								</smartForm:GroupElement>
+								<smartForm:GroupElement label="{/#Campaigns/Tactics/@sap:label}">
+									<smartField:SmartField textLabel="{Tacticstx}" value="{Tacticstx}"/>
+								</smartForm:GroupElement>
+								<smartForm:GroupElement label="{/#Campaigns/Priority/@sap:label}">
+									<smartField:SmartField textLabel="{CampPriotx}" value="{CampPriotx}"/>
+								</smartForm:GroupElement>
+								<smartForm:GroupElement label="{/#Campaigns/Currency/@sap:label}">
+									<smartField:SmartField textLabel="{CurrencyText}" value="{CurrencyText}"/>
+								</smartForm:GroupElement>
+								<smartForm:GroupElement label="Parent">
+									<smartField:SmartField textLabel="{ParentExtId}" value="{ParentExtId}"/>
+								</smartForm:GroupElement>
+								<smartForm:GroupElement label="{/#Campaigns/AuthGroup/@sap:label}">
+									<smartField:SmartField textLabel="{AuthGroupText}" value="{AuthGroupText}"/>
+								</smartForm:GroupElement>								
+							</smartForm:Group>
+							<smartForm:Group label="Dates">
+								<smartForm:GroupElement label="{/#Campaigns/Planstartdate/@sap:label}">
+									<smartField:SmartField textLabel="{PlanstartTstmps}" value="{PlanstartTstmps}"/>
+								</smartForm:GroupElement>
+								<smartForm:GroupElement label="{/#Campaigns/Planfinishdate/@sap:label}">
+									<smartField:SmartField textLabel="{PlanfinishTstmps}" value="{PlanfinishTstmps}"/>
+								</smartForm:GroupElement>
+								<smartForm:GroupElement label="{/#Campaigns/Actualstartdate/@sap:label}">
+									<smartField:SmartField textLabel="{ActualstartTstmps}" value="{ActualstartTstmps}"/>
+								</smartForm:GroupElement>
+								<smartForm:GroupElement label="{/#Campaigns/Actualfinishdate/@sap:label}">
+									<smartField:SmartField textLabel="{ActualfinishTstmps}" value="{ActualfinishTstmps}"/>
+								</smartForm:GroupElement>								
+							</smartForm:Group>
+							<smartForm:Group label="Marketing Area">
+								<smartForm:GroupElement label="{/#Campaigns/MktOrg/@sap:label}">
+									<smartField:SmartField textLabel="{MktOrgDesc}" value="{MktOrgDesc}"/>
+								</smartForm:GroupElement>
+								<smartForm:GroupElement label="{/#Campaigns/DisChannel/@sap:label}">
+									<smartField:SmartField textLabel="{ChannelDesc}" value="{ChannelDesc}"/>
+								</smartForm:GroupElement>
+								<smartForm:GroupElement label="{/#Campaigns/Division/@sap:label}">
+									<smartField:SmartField textLabel="{DivisionDesc}" value="{DivisionDesc}"/>
+								</smartForm:GroupElement>								
+							</smartForm:Group>
+							<smartForm:Group label="Channel">
+								<smartForm:GroupElement label="{/#Campaigns/Channeltx/@sap:label}">
+									<smartField:SmartField textLabel="{Channeltx}" value="{Channeltx}"/>
+								</smartForm:GroupElement>
+								<smartForm:GroupElement label="{/#Campaigns/MailForm/@sap:label}">
+									<smartField:SmartField textLabel="{MailForm}" value="{MailForm}"/>
+								</smartForm:GroupElement>
+								<smartForm:GroupElement label="{/#Campaigns/Smartform/@sap:label}">
+									<smartField:SmartField textLabel="{Smartform}" value="{Smartform}"/>
+								</smartForm:GroupElement>
+								<smartForm:GroupElement label="{/#Campaigns/FaxForm/@sap:label}">
+									<smartField:SmartField textLabel="{FaxForm}" value="{FaxForm}"/>
+								</smartForm:GroupElement>
+								<smartForm:GroupElement label="{/#Campaigns/SmsForm/@sap:label}">
+									<smartField:SmartField textLabel="{SmsForm}" value="{SmsForm}"/>
+								</smartForm:GroupElement>
+								<smartForm:GroupElement label="{/#Campaigns/FileExportForm/@sap:label}">
+									<smartField:SmartField textLabel="{FileExportForm}" value="{FileExportForm}"/>
+								</smartForm:GroupElement>
+							</smartForm:Group>
+						</smartForm:SmartForm>
 					</IconTabFilter>
-					<IconTabFilter
-							id="iconTabBarFilter2"
-							icon="sap-icon://attachment"
-							tooltip="{i18n>detailIconTabBarAttachments}">
-					</IconTabFilter>
+					<IconTabFilter id="iconTabBarFilter2" icon="sap-icon://future" tooltip="Future"></IconTabFilter>
 				</items>
 			</IconTabBar>
-
 		</semantic:content>
-
 		<semantic:sendEmailAction>
-			<semantic:SendEmailAction
-					id="shareEmail"
-					press="onShareEmailPress"/>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
 		</semantic:sendEmailAction>
-
 		<semantic:shareInJamAction>
-			<semantic:ShareInJamAction
-					id="shareInJam"
-					visible="{FLP>/isShareInJamActive}"
-					press="onShareInJamPress"/>
+			<semantic:ShareInJamAction id="shareInJam" visible="{FLP>/isShareInJamActive}" press="onShareInJamPress"/>
 		</semantic:shareInJamAction>
-
 		<semantic:saveAsTileAction>
-			<footerbar:AddBookmarkButton
-					id="shareTile"
-					title="{detailView>/saveAsTileTitle}"/>
+			<footerbar:AddBookmarkButton id="shareTile" title="{detailView>/saveAsTileTitle}"/>
 		</semantic:saveAsTileAction>
-
 	</semantic:DetailPage>
-
 </mvc:View>
