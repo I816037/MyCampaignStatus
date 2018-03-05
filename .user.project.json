@@ -18,9 +18,15 @@
         }
       ],
       "hashParameter": "MyCampaignStatus-display",
-      "ui5ActiveVersion": null,
+      "ui5ActiveVersion": "1.52.7",
       "ui5VerSource": null,
       "isDefaultVersion": 1,
+      "backendSystem": [
+        {
+          "source": "AG3",
+          "destinations": "AG3"
+        }
+      ],
       "_metadata": {
         "id": 1978926,
         "runnerId": "webapprunner",
@@ -46,9 +52,15 @@
         }
       ],
       "hashParameter": "MyCampaignStatus-display",
-      "ui5ActiveVersion": null,
+      "ui5ActiveVersion": "1.52.7",
       "ui5VerSource": null,
       "isDefaultVersion": 1,
+      "backendSystem": [
+        {
+          "source": "AG3",
+          "destinations": "AG3"
+        }
+      ],
       "_metadata": {
         "id": 1978925,
         "runnerId": "webapprunner",
@@ -61,7 +73,7 @@
       "previewMode": 1,
       "dataMode": 1,
       "workspace": "withoutWorkspace",
-      "ui5ActiveVersion": null,
+      "ui5ActiveVersion": "1.52.7",
       "ui5VerSource": null,
       "isDefaultVersion": 1,
       "urlParameters": [
@@ -74,6 +86,12 @@
           "paramName": "",
           "paramValue": "",
           "paramActive": false
+        }
+      ],
+      "backendSystem": [
+        {
+          "source": "AG3",
+          "destinations": "AG3"
         }
       ],
       "_metadata": {
@@ -87,7 +105,7 @@
       "previewMode": 1,
       "dataMode": 1,
       "workspace": "withoutWorkspace",
-      "ui5ActiveVersion": null,
+      "ui5ActiveVersion": "1.52.7",
       "ui5VerSource": null,
       "isDefaultVersion": 1,
       "urlParameters": [
@@ -103,6 +121,12 @@
         }
       ],
       "hashParameter": "",
+      "backendSystem": [
+        {
+          "source": "AG3",
+          "destinations": "AG3"
+        }
+      ],
       "_metadata": {
         "id": 3635224,
         "runnerId": "webapprunner",
@@ -114,7 +138,7 @@
       "previewMode": 1,
       "dataMode": 1,
       "workspace": "withoutWorkspace",
-      "ui5ActiveVersion": null,
+      "ui5ActiveVersion": "1.52.7",
       "ui5VerSource": null,
       "isDefaultVersion": 1,
       "urlParameters": [
@@ -130,6 +154,12 @@
         }
       ],
       "hashParameter": "",
+      "backendSystem": [
+        {
+          "source": "AG3",
+          "destinations": "AG3"
+        }
+      ],
       "_metadata": {
         "id": 7524840,
         "runnerId": "webapprunner",
