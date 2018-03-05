@@ -12,7 +12,8 @@
     "excludedFiles": [
       "test.html"
     ],
-    "buildRequired": true
+    "buildRequired": false,
+    "lastBuildDateTime": "Mon, 05 Mar 2018 02:38:12 GMT"
   },
   "dataBinding": {
     "/webapp/view/App.view.xml": {
@@ -66,5 +67,10 @@
     "notifyBeforePushLevel": "Error",
     "blockPush": false,
     "blockPushLevel": "Error"
+  },
+  "hcpdeploy": {
+    "account": "i816037trial",
+    "name": "mycampaignstatus",
+    "lastVersionWeTriedToDeploy": "1.0.0"
   }
 }
